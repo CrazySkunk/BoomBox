@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BoomBox</string>
+    <string name="notification_channel_name">Music channel</string>
+    <string name="notification_channel_description">Boom Box</string>
+</resources>

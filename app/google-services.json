@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "212669387473",
+    "project_id": "boom-box-softech",
+    "storage_bucket": "boom-box-softech.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212669387473:android:d24b375916d4123b056bf0",
+        "android_client_info": {
+          "package_name": "com.softech.code.boombox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212669387473-a70fsu0urc7celb7ntqhe37m449s9fj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDavbzxEWzHdtDwQrT7zZ8uc4U4XigoiHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212669387473-a70fsu0urc7celb7ntqhe37m449s9fj1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
