@@ -14,6 +14,7 @@ import com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector
 import com.google.android.exoplayer2.ext.mediasession.TimelineQueueNavigator
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import com.softech.code.boombox.another.Constants.MEDIA_ROOT_ID
+import com.softech.code.boombox.another.Constants.NETWORK_ERROR
 import com.softech.code.boombox.exoplayer.callbacks.MusicPlayBackPreparer
 import com.softech.code.boombox.exoplayer.callbacks.MusicPlayerEventListener
 import com.softech.code.boombox.exoplayer.callbacks.MusicPlayerNotificationListener
@@ -152,6 +153,7 @@ class MusicService : MediaBrowserServiceCompat() {
                                 isPlayerInitialized = true
                             }
                         } else {
+                            mediaSession.sendSessionEvent(NETWORK_ERROR,null)
                             result.sendResult(null)
                         }
                     }

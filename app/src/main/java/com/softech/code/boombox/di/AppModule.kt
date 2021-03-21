@@ -4,10 +4,8 @@ import android.content.Context
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
-import com.softech.code.boombox.BoomBoxApplication
 import com.softech.code.boombox.R
 import com.softech.code.boombox.adapters.SwipeSongAdapter
-import com.softech.code.boombox.service.MusicServiceConnection
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -18,6 +16,12 @@ import javax.inject.Singleton
 @Module
 @InstallIn(ApplicationComponent::class)
 object AppModule {
+
+    @Singleton
+    @Provides
+    fun providesServiceConnection(
+        @ApplicationContext context: Context
+    ) = MusicServiceConnection(context)
 
     @Singleton
     @Provides
