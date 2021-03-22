@@ -5,5 +5,12 @@
     <color name="colorAccent">#08FF04</color>
     <color name="mediumDarkBackground">#303030</color>
     <color name="darkBackground">#202020</color>
-    <color name="lightBackground">#404040</color>
+    <color name="lightBackground">#D3CACA</color>
+    <color name="purple_500">#7543CF</color>
+    <color name="purple_700">#5526A8</color>
+    <color name="white">#FFFFFF</color>
+    <color name="teal_200">#D8C7C7</color>
+    <color name="teal_700">#CDB9B9</color>
+    <color name="black">#120E0E</color>
+    <color name="purple_200">#9673D5</color>
 </resources>

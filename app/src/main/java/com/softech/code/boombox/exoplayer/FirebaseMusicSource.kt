@@ -23,7 +23,7 @@ class FirebaseMusicSource  @Inject constructor(
         state = State.STATE_INITIALIZING
         val allSongs = musicDataBase.getAllSongs()
         songs = allSongs.map { song ->
-            MediaMetadataCompat.Builder()
+            Builder()
                 .putString(METADATA_KEY_ARTIST,song.subtitle)
                 .putString(METADATA_KEY_MEDIA_ID,song.mediaId)
                 .putString(METADATA_KEY_TITLE,song.title)
@@ -75,12 +75,12 @@ class FirebaseMusicSource  @Inject constructor(
         }
 
     fun whenReady(action: (Boolean) -> Unit): Boolean {
-        if (state == State.STATE_CREATED || state == State.STATE_INITIALIZING) {
+        return if (state == State.STATE_CREATED || state == State.STATE_INITIALIZING) {
             onReadyListeners += action
-            return false
+            false
         } else {
             action(state == State.STATE_INITIALIZED)
-            return true
+            true
         }
     }
 }

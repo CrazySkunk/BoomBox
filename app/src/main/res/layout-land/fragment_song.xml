@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@mipmap/abstract_red"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="ui.MainActivity">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvSongName"
@@ -23,7 +24,7 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginStart="16dp"
-        android:background="@color/darkBackground"
+        android:background="@mipmap/music_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,6 +34,7 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textColor="@color/white"
         android:text="00:00"
         android:layout_marginStart="16dp"
         android:textSize="14sp"
@@ -44,6 +46,8 @@
         android:id="@+id/seekBar"
         android:layout_width="0dp"
         android:layout_height="18dp"
+        android:progressTint="@color/white"
+        android:theme="@style/Platform.MaterialComponents.Light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tvSongDuration"
         app:layout_constraintStart_toEndOf="@+id/tvCurTime"
@@ -55,6 +59,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="00:00"
+        android:textColor="@color/white"
         android:layout_marginEnd="16dp"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/seekBar"
@@ -67,7 +72,7 @@
         android:layout_height="75dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/circle_drawable"
-        android:src="@drawable/ic_play"
+        android:src="@drawable/play_arrow_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tvCurTime"
         app:layout_constraintTop_toBottomOf="@+id/seekBar" />
@@ -76,8 +81,10 @@
         android:id="@+id/ivSkipPrevious"
         android:layout_width="56dp"
         android:layout_height="56dp"
+        android:padding="5dp"
+        android:background="@drawable/circle_drawable"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_skip_previous"
+        android:src="@drawable/skip_previous_24"
         app:layout_constraintBottom_toBottomOf="@+id/ivPlayPauseDetail"
         app:layout_constraintEnd_toStartOf="@+id/ivPlayPauseDetail"
         app:layout_constraintTop_toTopOf="@+id/ivPlayPauseDetail" />
@@ -87,7 +94,9 @@
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_marginStart="16dp"
-        android:src="@drawable/ic_skip"
+        android:background="@drawable/circle_drawable"
+        android:padding="5dp"
+        android:src="@drawable/skip_next_24"
         app:layout_constraintBottom_toBottomOf="@+id/ivPlayPauseDetail"
         app:layout_constraintStart_toEndOf="@+id/ivPlayPauseDetail"
         app:layout_constraintTop_toTopOf="@+id/ivPlayPauseDetail" />
@@ -97,13 +106,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+        app:layout_constraintGuide_begin="247dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7" />
+        app:layout_constraintGuide_begin="288dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
